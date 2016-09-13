@@ -1,5 +1,5 @@
-''' Created 13-09-2016
-''' Author Aleksandar <savevjr@gmail.com>
+# Created 13-09-2016
+# Author Aleksandar <savevjr@gmail.com>
 
 from random import randint
 
