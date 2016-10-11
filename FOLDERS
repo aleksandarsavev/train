@@ -1,0 +1,9 @@
+Created: 11-10-2016
+Author:  Aleksandar Savev
+Folder structure:
+
+--repo                       - repositories which can be published
+--repo-local                 - local clones of foreign repositories
+--develop                    - local projects and workspaces
+--archive                    - old files and folders
+--backup                     - importand archives
