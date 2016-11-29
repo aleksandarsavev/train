@@ -1,0 +1,9 @@
+{
+    "attributes" : ["color", "size", "material", "expensive"],
+    "rows" : [
+        ["red", "big", "metal", "yes"],
+        ["red", "small", "metal", "yes"],
+        ["green", "big", "metal", "yes"],
+        ["red", "small", "plastic", "no"]
+    ]
+}

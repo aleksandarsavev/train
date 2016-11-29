@@ -1,0 +1,13 @@
+{
+    "attributes" : ["X", "Y"],
+    "rows" : [
+        ["Math", "Yes"],
+        ["History", "No"],
+        ["CS", "Yes"],
+        ["Math", "No"],
+        ["Math", "No"],
+        ["CS", "Yes"],
+        ["History", "No"],
+        ["Math" ,"Yes"]
+    ]
+}
