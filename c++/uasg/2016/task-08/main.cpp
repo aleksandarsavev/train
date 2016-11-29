@@ -33,7 +33,7 @@ float** loadMatrix(const char* filename) {
 void printMatrix(float** matrix) {
     for (int y = 0; y < N; y++) {
         for (int x = 0; x < N; x++)
-            cout << setprecision(3) << matrix[y][x] << ' ';
+            cout << setw(7) <<  setprecision(3) << matrix[y][x] << ' ';
         cout << endl;
     }
 }
@@ -69,5 +69,5 @@ int main() {
     float ** result = buildMatrix(input);
     cout << endl << "Matrix B:" << endl;
     printMatrix(result);
-    cout << endl << "Positive numbers over the main diagonal of matrix B: " << positivesOverMainDiagonal(result) << endl;
+    cout << endl << "Positive numbers (greater than 0) over the main diagonal of matrix B: " << positivesOverMainDiagonal(result) << endl;
 }
