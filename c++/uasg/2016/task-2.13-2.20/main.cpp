@@ -21,8 +21,8 @@ float** loadMatrix(const char* filename) {
     in >> M;
     in >> N;
 
-    float** matrix = new float*[N];
-    for(int i = 0; i < N; i++)
+    float** matrix = new float*[M];
+    for(int i = 0; i < M; i++)
         matrix[i] = new float[N];
     
     for (int y = 0; y < M; y++)
