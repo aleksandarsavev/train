@@ -1,4 +1,3 @@
-// task-08
 #include <istream>
 #include <string>
 #include <fstream>
