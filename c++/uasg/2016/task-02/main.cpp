@@ -13,16 +13,19 @@ int N = 2;
 
 float **loadMatrix(const char *filename)
 {
+    // open an input file stream
     ifstream in(filename);
 
     if (!in)
     {
+        // if the stream is empty,
+        // that means the file cannot be opened
         cout << "Cannot open file.\n";
         return NULL;
     }
-
+    // read the number of points
     in >> M;
-    // create empty matrix
+    // create empty matrix with size M x 2
     float **matrix = new float *[M];
     for (int i = 0; i < M; i++)
         matrix[i] = new float[N];
@@ -32,6 +35,8 @@ float **loadMatrix(const char *filename)
         for (int x = 0; x < N; x++)
             in >> matrix[y][x];
 
+    // close the input file stream
+    // this way we release the resource
     in.close();
     return matrix;
 }
@@ -60,6 +65,7 @@ float **buildMatrix(float **source)
         float x1 = source[y][0];
         float y1 = source[y][1];
         // calculate only the half of the matrix
+        // from x = 0 to x <= y
         for (int x = 0; x <= y; x++)
         {
             float x2 = source[x][0];
@@ -80,6 +86,8 @@ void printSimmilar(float **source)
     {
         for (int x = y + 1; x < M; x++)
         {
+            // if the coordinates of two point are the same,
+            // we print the indexes on the standart output
             if (source[y][0] == source[x][0] && source[y][1] == source[x][1])
             {
                 cout << "Point[" << y << "] == Point[" << x << "]\n";
