@@ -9,7 +9,7 @@
 using namespace std;
 
 int M = 0;
-const int N = 2;
+int N = 2;
 float **loadMatrix(const char *filename)
 {
     ifstream in(filename);
