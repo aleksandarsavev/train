@@ -1,10 +1,6 @@
 // task-02
-#include <istream>
-#include <string>
 #include <fstream>
 #include <iostream>
-#include <iomanip>
-#include <math.h>
 
 using namespace std;
 
@@ -41,13 +37,10 @@ float **loadMatrix(const char *filename)
     return matrix;
 }
 
-void printMatrix(float **matrix)
-{
-    for (int y = 0; y < M; y++)
-    {
-        for (int x = 0; x < N; x++)
-        {
-            cout << setw(7) << setprecision(3) << matrix[y][x] << ' ';
+void printMatrix(float** matrix) {
+    for (int y = 0; y < M; y++) {
+        for (int x = 0; x < N; x++) {
+            cout << matrix[y][x] << "  ";
         }
         cout << '\n';
     }

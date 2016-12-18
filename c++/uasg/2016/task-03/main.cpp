@@ -1,8 +1,7 @@
-#include <istream>
-#include <string>
+// task-03
 #include <fstream>
 #include <iostream>
-#include <iomanip>
+#include <math.h>
 
 using namespace std;
 
@@ -34,9 +33,10 @@ float** loadMatrix(const char* filename) {
 
 void printMatrix(float** matrix) {
     for (int y = 0; y < M; y++) {
-        for (int x = 0; x < N; x++)
-            cout << setw(7) << setprecision(3) << matrix[y][x] << ' ';
-        cout << endl;
+        for (int x = 0; x < N; x++) {
+            cout << floorf(matrix[y][x] * 100) / 100 << "  ";
+        }
+        cout << '\n';
     }
 }
 

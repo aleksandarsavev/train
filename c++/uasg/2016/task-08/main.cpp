@@ -1,15 +1,14 @@
 // task-08
-#include <istream>
-#include <string>
 #include <fstream>
 #include <iostream>
-#include <iomanip>
+#include <math.h>
 
 using namespace std;
 
 int N = 0;
 
 float** loadMatrix(const char* filename) {
+    // opening an input file stream
     ifstream in(filename);
 
     if (!in) {
@@ -17,12 +16,15 @@ float** loadMatrix(const char* filename) {
         return NULL;
     }
     
+    // reading the count of rows
     in >> N;
 
+    // initialize an empty matrix N x N
     float** matrix = new float*[N];
     for(int i = 0; i < N; i++)
         matrix[i] = new float[N];
     
+    // reading the matrix from file
     for (int y = 0; y < N; y++)
         for (int x = 0; x < N; x++)
             in >> matrix[y][x];
@@ -33,9 +35,12 @@ float** loadMatrix(const char* filename) {
 
 void printMatrix(float** matrix) {
     for (int y = 0; y < N; y++) {
-        for (int x = 0; x < N; x++)
-            cout << setw(7) <<  setprecision(3) << matrix[y][x] << ' ';
-        cout << endl;
+        for (int x = 0; x < N; x++) {
+            // print the values of matrix rounded up to the
+            // second digit after the decimal point
+            cout << floorf(matrix[y][x] * 100) / 100 << "  ";
+        }
+        cout << '\n';
     }
 }
 
@@ -46,8 +51,10 @@ float** buildMatrix(float** source) {
     
     for (int x = 0; x < N; x++)
         for (int y = 0; y < N; y++)
+            // if the sum x + y is even
             if ((x + y) % 2 == 0)
                 matrix[y][x] = source[y][x] + source[x][y];
+            // if the sum x + y is odd
             else
                 matrix[y][x] = source[y][x] - source[x][y];
             
