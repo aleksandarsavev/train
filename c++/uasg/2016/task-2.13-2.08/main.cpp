@@ -39,14 +39,6 @@ void printMatrix(float** matrix) {
     }
 }
 
-float getMaximum(float** matrix, int row) {
-    float max = matrix[0][0];
-    for (int y = 0; y < M; y++)
-        for (int x = 0; x < N; x++)
-            max = (matrix[y][x] < max) ? max : matrix[y][x];
-    return max;
-}
-
 int main() {
     float ** input = loadMatrix("input.txt");
     cout << "Input (matrix A):" << '\n';
