@@ -37,7 +37,7 @@ void printMatrix(float** matrix) {
         for (int x = 0; x < N; x++) {
             // print the values of matrix rounded up to the
             // second digit after the decimal point
-            cout << f(int)(matrix[y][x] * 100) / 100.0 << "  ";
+            cout << (int)(matrix[y][x] * 100) / 100.0 << "  ";
         }
         cout << '\n';
     }
