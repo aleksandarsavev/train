@@ -1,6 +1,7 @@
 // task-02
 #include <fstream>
 #include <iostream>
+#include <math.h>
 
 using namespace std;
 

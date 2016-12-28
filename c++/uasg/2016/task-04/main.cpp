@@ -33,7 +33,7 @@ float** loadMatrix(const char* filename) {
 void printMatrix(float** matrix) {
     for (int y = 0; y < M; y++) {
         for (int x = 0; x < N; x++) {
-            cout << f(int)(matrix[y][x] * 100) / 100.0 << "  ";
+            cout << (int)(matrix[y][x] * 100) / 100.0 << "  ";
         }
         cout << '\n';
     }
