@@ -1,13 +1,18 @@
 #include "main.h"
 #include <iostream>
 #include <iomanip>
+#include <stdlib.h>
+#include <time.h>
 
 using namespace std;
 
 int main() {
-    log("2048");
+    srand(time(NULL));
+//    log("2048 (c)");
+    struct matrix *m = new matrix;
     setup(m);
-    print(m);
+    //print(m);
+    cout << rnd_number() << '\n';
 }
 
 void setup(struct matrix *m) {
@@ -32,4 +37,18 @@ void inline log(const char *msg) {
     cout << msg << '\n';
 }
 
+int inline rnd(int max) {
+    return (rand() % max) + 1;
+}
 
+int inline rnd_number() {
+    return rnd(2) * 2;
+}
+
+int rnd_position(struct matrix *m) {
+    bool found = false;
+    int x, y;
+    while (!found) {
+        
+    }
+}
